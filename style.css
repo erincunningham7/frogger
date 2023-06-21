@@ -22,3 +22,7 @@
 .log-left, .log-right{
     background-color: lightblue;
 }
+
+.car-left, .car-right {
+    background-color: grey;
+}
