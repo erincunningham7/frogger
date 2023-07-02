@@ -9,6 +9,9 @@ let currentIndex = 76
 const width = 9
 const carsLeft = document.querySelectorAll('.car-left')
 const carsRight = document.querySelectorAll('.car-right')
+let timerId
+let outcomeTimerId
+let currentTime = 20
 
 function moveFrog(e) {
     squares[currentIndex].classList.remove('frog')
