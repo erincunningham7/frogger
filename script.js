@@ -34,7 +34,7 @@ function moveFrog(e) {
 }
 document.addEventListener('keyup', moveFrog)
 
-function autoMoveLogs() {
+function autoMoveElements() {
     logsLeft.forEach(logLeft => moveLogLeft(logLeft))
     LogsRight.forEach(logRight => moveLogRight(logRight))
 }
@@ -91,4 +91,4 @@ function moveLogRight(logRight) {
     }
 }
 
-setInterval(autoMoveLogs, 1000)
+setInterval(autoMoveElements, 1000)
