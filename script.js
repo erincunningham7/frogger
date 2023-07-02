@@ -40,6 +40,8 @@ function moveFrog(e) {
 document.addEventListener('keyup', moveFrog)
 
 function autoMoveElements() {
+    currentTime--
+    timeLeftDisplay.textContent = currentTime
     logsLeft.forEach(logLeft => moveLogLeft(logLeft))
     LogsRight.forEach(logRight => moveLogRight(logRight))
     carsLeft.forEach(carLeft => moveCarLeft(carLeft))
