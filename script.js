@@ -129,4 +129,19 @@ function moveCarRight(carRight) {
     }
 }
 
+function lose() {
+    if (
+        squares[currentIndex].classList.contains('c1') ||
+        squares[currentIndex].classList.contains('l4') ||
+        squares[currentIndex].classList.contains('l5') ||
+        currentTime <= 0
+    ) {
+        resultDisplay.textContent = 'You lose!'
+        clearInterval(timerId)
+        clearInterval(outcomeTimerId)
+        squares[currentIndex].classList.remove('frog')
+        document.removeEventListener('keyup', moveFrog)
+    }
+}
+
 setInterval(autoMoveElements, 1000)
