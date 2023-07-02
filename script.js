@@ -7,6 +7,8 @@ const LogsRight = document.querySelectorAll('.log-right')
 console.log(squares)
 let currentIndex = 76
 const width = 9
+const carsLeft = document.querySelectorAll('.car-left')
+const carsRight = document.querySelectorAll('.car-right')
 
 function moveFrog(e) {
     squares[currentIndex].classList.remove('frog')
