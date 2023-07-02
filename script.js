@@ -39,6 +39,8 @@ document.addEventListener('keyup', moveFrog)
 function autoMoveElements() {
     logsLeft.forEach(logLeft => moveLogLeft(logLeft))
     LogsRight.forEach(logRight => moveLogRight(logRight))
+    carsLeft.forEach(carLeft => moveCarLeft(carLeft))
+    carsRight.forEach(carRight => moveCarRight(carRight))
 }
 
 //autoMoveLogs()
