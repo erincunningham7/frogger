@@ -37,7 +37,7 @@ function moveFrog(e) {
     squares[currentIndex].classList.add('frog')
 
 }
-document.addEventListener('keyup', moveFrog)
+// document.addEventListener('keyup', moveFrog)
 
 function autoMoveElements() {
     currentTime--
@@ -163,4 +163,16 @@ function win() {
     }
 }
 
-setInterval(autoMoveElements, 1000)
+startPauseButton.addEventListener('click', () => {
+    if (timerId) {
+        clearInterval(timerId)
+        clearInterval(outcomeTimerId)
+        outcomeTimerId = null
+        timerId = null
+        document.removeEventListener('keyup', moveFrog)
+    } else {
+        timerId = setInterval(autoMoveElements, 1000)
+        outcomeTimerId = setInterval(checkOutComes, 50)
+        document.addEventListener('keyup', moveFrog)
+    }
+})
